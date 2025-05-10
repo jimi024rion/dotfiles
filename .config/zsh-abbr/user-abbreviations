@@ -1,0 +1,21 @@
+# ls
+# abbr "ls"="ls --color=auto"
+# abbr "ll"="ls -l"
+# abbr "la"="ls -la"
+
+# grep
+# abbr "grep"="grep --color=auto -n"
+# abbr "gr"="grep -r"
+
+# file operation
+# abbr "cp"="cp -i"
+# abbr "mv"="mv -i"
+# abbr "rm"="rm -i"
+# abbr "rmf"="rm -fr"
+
+# etc
+# abbr "hg"="history | grep"
+# abbr "run-help"="man"
+# abbr "which-command"="whence"
+
+# git
