@@ -5,8 +5,11 @@
 # alias
 source "$ZRCDIR/alias.zsh"
 
+# Oh My Zsh
+source "$ZRCDIR/ohmy.zsh"
+
 # oh-my-posh
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/takuya.omp.json)"
+# eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/takuya.omp.json)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc' ]; then . '/opt/homebrew/share/google-cloud-sdk/path.zsh.inc'; fi

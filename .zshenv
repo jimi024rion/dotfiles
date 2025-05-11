@@ -22,12 +22,11 @@ setopt autocd
 
 typeset -U path PATH manpath sudo_path
 
-export GOPATH=$(go env GOPATH)
 export VOLTA_HOME="$HOME/.volta"
 
 path=(
     $HOME/.pyenv/shims(N-/)
-    $GOPATH/bin(N-/)
+    $HOME/go/bin(N-/)
     $VOLTA_HOME/bin(N-/)
     $HOME/bin(N-/)
     $HOME/.local/bin(N-/)
