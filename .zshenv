@@ -1,5 +1,5 @@
 #----------------------------------------------------------#
-##                 Environment Variables                  ##
+#                  Environment Variables                   #
 #----------------------------------------------------------#
 
 export LC_ALL="${LC_ALL:-ja_JP.UTF-8}"
@@ -31,6 +31,7 @@ path=(
     $VOLTA_HOME/bin(N-/)
     $HOME/bin(N-/)
     $HOME/.local/bin(N-/)
+    /opt/homebrew/bin(N-/)
     $path
 )
 export PATH
