@@ -82,7 +82,7 @@ plugins=(
     # Custom
     zsh-syntax-highlighting
     zsh-autosuggestions
-    # zsh-completions
+    zsh-completions
     zsh-autocomplete
     you-should-use
 )
