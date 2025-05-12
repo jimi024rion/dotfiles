@@ -16,6 +16,11 @@ export ZRCDIR=$ZHOMEDIR/rc
 export ZDATADIR=$XDG_DATA_HOME/zsh
 export ZCACHEDIR=$XDG_CACHE_HOME/zsh
 
+# Git Credetials
+if [[ -f ~/.config/git/credentials.zsh ]]; then
+  source ~/.config/git/credentials.zsh
+fi
+
 typeset -U path PATH manpath sudo_path
 
 export VOLTA_HOME="$HOME/.volta"
