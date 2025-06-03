@@ -1,34 +1,26 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
-local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_lower_right_triangle
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_upper_left_triangle
-
 config.automatically_reload_config = true
-
--- default cwd
 config.default_cwd = "/Users/jimii"
 
--- window size
+-- カラースキームの設定
+config.color_scheme = "Dracula+" -- cyberpunk/catppuccin-mocha
+-- ウィンドウサイズ
 config.initial_rows = 40
 config.initial_cols = 140
-
--- カラースキームの設定
--- config.color_scheme = 'catppuccin-mocha'
--- config.color_scheme = "cyberpunk"
-config.color_scheme = "Dracula+"
-
+-- 背景透過設定
+config.window_background_opacity = 0.85
+config.macos_window_background_blur = 20
 -- フォントの設定
+config.use_ime = true
+config.font_size = 12.0
 config.font = wezterm.font_with_fallback({
     "JetBrainsMono Nerd Font",
     "Cica",
 })
-config.font_size = 12.0
-config.use_ime = true
-
 -- カーソル設定
 config.default_cursor_style = "SteadyBlock"
-
 -- カラー設定
 config.colors = {
     cursor_fg = "#11111b",
@@ -40,21 +32,31 @@ config.colors = {
     },
 }
 
--- 背景透過設定
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 20
-
--- タブバーの設定
-config.use_fancy_tab_bar = false
-config.tab_max_width = 100
+--------------------------------------------------------------------------------
+-- Tab
+--------------------------------------------------------------------------------
+-- タイトルバーを非表示
 config.window_decorations = "RESIZE"
+-- タブバーの表示
+config.show_tabs_in_tab_bar = true
+-- タブバーが一つの時は非表示
 -- config.hide_tab_bar_if_only_one_tab = true
+config.use_fancy_tab_bar = false
+-- タブバーの設定
+config.tab_max_width = 100
+-- タブバーを下部に表示
 -- config.tab_bar_at_bottom = true
-config.window_background_gradient = { -- タブバーを背景と同じ色にする
+-- タブバーを背景色に合わせる
+config.window_background_gradient = {
     colors = { "#000000" },
 }
+-- タブの追加ボタンを非表示
 config.show_new_tab_button_in_tab_bar = false
+-- タブの閉じるボタンを非表示
 config.show_close_tab_button_in_tabs = false
+
+local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_lower_right_triangle
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_upper_left_triangle
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
     local background = "#5c6d74"
@@ -81,51 +83,12 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
     }
 end)
 
--- tabline.wez
--- local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
--- tabline.setup({
---     options = {
---         -- theme = "catppuccin-mocha",
---         theme = "cyberpunk",
---         -- theme = "Cobalt Neon",
---         section_separators = {
---             left = wezterm.nerdfonts.ple_upper_left_triangle,
---             right = wezterm.nerdfonts.ple_lower_right_triangle,
---         },
---         component_separators = {
---             left = wezterm.nerdfonts.ple_forwardslash_separator,
---             right = wezterm.nerdfonts.ple_forwardslash_separator,
---         },
---         tab_separators = {
---             left = wezterm.nerdfonts.ple_upper_left_triangle,
---             right = wezterm.nerdfonts.ple_lower_right_triangle,
---         },
---         -- color_overrides = {
---         theme_overrides = {
---             tab = {
---                 active = { fg = "#091833", bg = "#59c2c6" },
---             },
---         },
---     },
---     sections = {
---         tab_active = {
---             -- "index",
---             -- { "process", padding = { left = 0, right = 1 } },
---             "",
---             { "cwd",    padding = { left = 1, right = 0 } },
---             { "zoomed", padding = 1 },
---         },
---         tab_inactive = {
---             -- "index",
---             -- { "process", padding = { left = 0, right = 1 } },
---             "󰉋",
---             { "cwd",    padding = { left = 1, right = 0 } },
---             { "zoomed", padding = 1 },
---         },
---     },
--- })
-
+--------------------------------------------------------------------------------
+-- keybinds
+--------------------------------------------------------------------------------
+config.disable_default_key_bindings = true
 config.keys = require("keybinds").keys
 config.key_tables = require("keybinds").key_tables
+config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
 
 return config
