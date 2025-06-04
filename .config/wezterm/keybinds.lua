@@ -1,6 +1,15 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
 
+-- Show which key table is active in the status area
+wezterm.on("update-right-status", function(window, pane)
+  local name = window:active_key_table()
+  if name then
+    name = "TABLE: " .. name
+  end
+  window:set_right_status(name or "")
+end)
+
 return {
   keys = {
     { key = 'Tab',        mods = 'CTRL',           action = act.ActivateTabRelative(1) },
@@ -145,35 +154,22 @@ return {
     { key = 'DownArrow',  mods = 'SHIFT|ALT|CTRL', action = act.AdjustPaneSize { 'Down', 1 } },
     { key = 'Copy',       mods = 'NONE',           action = act.CopyTo 'Clipboard' },
     { key = 'Paste',      mods = 'NONE',           action = act.PasteFrom 'Clipboard' },
+    --------------------------------------------------------------------------------
     -- custom
-    -- Ctrl+左矢印でカーソルを前の単語に移動
-    {
-      key = "LeftArrow",
-      mods = "CTRL",
-      action = act.SendKey {
-        key = "b",
-        mods = "META",
-      },
-    },
-    -- Ctrl+右矢印でカーソルを次の単語に移動
-    {
-      key = "RightArrow",
-      mods = "CTRL",
-      action = act.SendKey {
-        key = "f",
-        mods = "META",
-      },
-    },
-    -- Ctrl+Backspaceで前の単語を削除
-    {
-      key = "Backspace",
-      mods = "CTRL",
-      action = act.SendKey {
-        key = "w",
-        mods = "CTRL",
-      },
-    },
-
+    --------------------------------------------------------------------------------
+    -- Option+左矢印でカーソルを前の単語に移動
+    { key = "LeftArrow",  mods = "OPT",            action = act.SendKey { key = "b", mods = "META", }, },
+    -- Option+右矢印でカーソルを次の単語に移動
+    { key = "RightArrow", mods = "OPT",            action = act.SendKey { key = "f", mods = "META", }, },
+    -- Option/Ctrl+Backspaceで前の単語を削除
+    { key = "Backspace",  mods = "OPT",            action = act.SendKey { key = "w", mods = "CTRL", }, },
+    { key = "Backspace",  mods = "CTRL",           action = act.SendKey { key = "w", mods = "CTRL", }, },
+    -- Command+左矢印で行頭に移動
+    { key = "LeftArrow",  mods = "CMD",            action = act.SendKey { key = "a", mods = "CTRL", }, },
+    -- Command+右矢印で行頭に移動
+    { key = "RightArrow", mods = "CMD",            action = act.SendKey { key = "e", mods = "CTRL", }, },
+    -- Command+Backspaceで行全体を削除
+    { key = "Backspace",  mods = "CMD",            action = act.SendKey { key = "u", mods = "CTRL", }, },
   },
 
   key_tables = {
