@@ -16,3 +16,6 @@ source "$ZRCDIR/ohmy.zsh"
 
 # Key Bindings
 source "$ZRCDIR/keybind.zsh"
+
+# Starship
+eval "$(starship init zsh)"
