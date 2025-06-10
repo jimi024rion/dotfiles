@@ -43,9 +43,9 @@ format = """
 style = "bold fg:#313244 bg:#eba0ac "
 
 [directory]
-truncation_length = 6
+truncation_length = 5
 truncation_symbol = ' '
-truncate_to_repo = false
+truncate_to_repo = true
 home_symbol = '󰋞 ~'
 read_only = ' 󰌾 '
 format = """
@@ -59,7 +59,7 @@ read_only_style = 'bold fg:#313244 bg:#b4befe'
 
 [git_branch]
 symbol = '  '
-truncation_length = 4
+truncation_length = 10
 truncation_symbol = ''
 style = 'bold fg:#89dceb bg:#45475a'
 format = """
@@ -87,6 +87,7 @@ format = """
 
 [git_metrics]
 disabled = false
+only_nonzero_diffs = true
 added_style = 'bold fg:#a6e3a1 bg:#45475a'
 deleted_style = 'bold fg:#89b4fa  bg:#45475a'
 format = """
