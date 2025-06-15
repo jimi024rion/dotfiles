@@ -8,9 +8,18 @@
 	editor = code  --wait
 	quotepath = false
 	ignorecase = false
-	pager = less -F
+	pager = delta
 [color]
 	ui = true
 [ghq]
 	root = /Users/jimii/src
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+    side-by-side = true
+[merge]
+    conflictstyle = zdiff3
 
