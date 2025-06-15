@@ -23,15 +23,13 @@ fi
 
 typeset -U path PATH manpath sudo_path
 
-export VOLTA_HOME="$HOME/.volta"
-
 path=(
-    $HOME/.pyenv/shims(N-/)
-    $HOME/go/bin(N-/)
-    $VOLTA_HOME/bin(N-/)
     $HOME/bin(N-/)
     $HOME/.local/bin(N-/)
     /opt/homebrew/bin(N-/)
+    $HOME/.pyenv/shims(N-/)
+    $HOME/go/bin(N-/)
+    $HOME/.volta/bin(N-/)
     $path
 )
 export PATH
