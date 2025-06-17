@@ -44,6 +44,7 @@ fpath=(
     $ZHOMEDIR/widgets(N-/)
     /usr/local/share/zsh/site-functions(N-/)
     /usr/share/zsh/site-functions(N-/)
+    /opt/homebrew/share/zsh/site-functions(N-/)
     $fpath
 )
 export FPATH
