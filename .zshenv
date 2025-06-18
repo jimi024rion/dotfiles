@@ -24,6 +24,7 @@ fi
 typeset -U path PATH manpath sudo_path
 
 path=(
+    ${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin
     $HOME/bin(N-/)
     $HOME/.local/bin(N-/)
     /opt/homebrew/bin(N-/)
