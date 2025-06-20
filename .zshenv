@@ -19,6 +19,8 @@ export ZCACHEDIR=$XDG_CACHE_HOME/zsh
 # aqua
 export AQUA_GLOBAL_CONFIG="${AQUA_GLOBAL_CONFIG:-$XDG_CONFIG_HOME/aquaproj-aqua/aqua.yaml}"
 export AQUA_PROGRESS_BAR=true # Show progress bar
+export AQUA_REMOVE_MODE=pl # Remove links and packages
+export AQUA_LOG_COLOR=always # Always use color in logs
 
 # Git Credetials
 if [[ -f ~/.config/git/credentials.zsh ]]; then
