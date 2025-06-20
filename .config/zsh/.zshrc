@@ -2,6 +2,10 @@
 #  .zshrc                                                  #
 #----------------------------------------------------------#
 
+# 補完システムのロードと初期化(Oh My Zshで行うためコメントアウト)
+# autoload -Uz compinit
+# compinit
+
 # Base Configuration
 source "$ZRCDIR/base.zsh"
 

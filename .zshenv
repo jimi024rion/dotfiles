@@ -16,6 +16,10 @@ export ZRCDIR=$ZHOMEDIR/rc
 export ZDATADIR=$XDG_DATA_HOME/zsh
 export ZCACHEDIR=$XDG_CACHE_HOME/zsh
 
+# aqua
+export AQUA_GLOBAL_CONFIG="${AQUA_GLOBAL_CONFIG:-$XDG_CONFIG_HOME/aquaproj-aqua/aqua.yaml}"
+export AQUA_PROGRESS_BAR=true # Show progress bar
+
 # Git Credetials
 if [[ -f ~/.config/git/credentials.zsh ]]; then
   source ~/.config/git/credentials.zsh
@@ -43,6 +47,7 @@ if [ -f '/opt/homebrew/share/google-cloud-sdk/completion.zsh.inc' ]; then . '/op
 # zsh function search path
 fpath=(
     $ZHOMEDIR/widgets(N-/)
+    $ZHOMEDIR/completions(N-/)
     /usr/local/share/zsh/site-functions(N-/)
     /usr/share/zsh/site-functions(N-/)
     /opt/homebrew/share/zsh/site-functions(N-/)
