@@ -22,6 +22,6 @@ MacOS
 
 ## Todos
 
-- [ ] Add HomreBrew settings
+- [ ] Add HomeBrew settings
 - [ ] Add abbr
 - [ ] Add bat settings
