@@ -12,10 +12,10 @@ $golang\
 \n$character\
 """
 
-right_format = """
-$cmd_duration\
-$time\
-"""
+# right_format = """
+# $cmd_duration\
+# $time\
+# """
 
 [os]
 disabled = false
