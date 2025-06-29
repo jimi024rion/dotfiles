@@ -10,3 +10,5 @@ setopt hist_ignore_space        # Ignore commands that start with a space
 setopt hist_reduce_blanks       # Remove superfluous blanks before saving history
 setopt hist_save_no_dups        # Remove duplicates when saving history
 setopt inc_append_history       # Append history to the history file immediately
+# Expansion and Globbing
+setopt globdots                 # Include dot files in globbing
