@@ -84,7 +84,7 @@ plugins=(
     zsh-autosuggestions
     zsh-completions
     zsh-autocomplete
-    you-should-use
+    # you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh
