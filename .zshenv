@@ -20,7 +20,7 @@ export ZCACHEDIR=$XDG_CACHE_HOME/zsh
 export AQUA_ROOT_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua/bin"
 export AQUA_GLOBAL_CONFIG="${AQUA_GLOBAL_CONFIG:-$XDG_CONFIG_HOME/aquaproj-aqua/aqua.yaml}"
 export AQUA_PROGRESS_BAR=true # Show progress bar
-# export AQUA_REMOVE_MODE=pl # Remove links and packages
+export AQUA_REMOVE_MODE=pl # Remove links and packages
 export AQUA_LOG_COLOR=always # Always use color in logs
 
 # Git Credetials
