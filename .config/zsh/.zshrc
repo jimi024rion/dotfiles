@@ -18,6 +18,9 @@ source "$ZRCDIR/alias.zsh"
 # Oh My Zsh
 source "$ZRCDIR/ohmy.zsh"
 
+# abbr
+source /opt/homebrew/share/zsh-abbr@6/zsh-abbr.zsh
+
 # Key Bindings
 source "$ZRCDIR/keybind.zsh"
 

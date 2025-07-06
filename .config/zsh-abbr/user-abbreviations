@@ -1,21 +1,47 @@
-# ls
-# abbr "ls"="ls --color=auto"
-# abbr "ll"="ls -l"
-# abbr "la"="ls -la"
-
-# grep
-# abbr "grep"="grep --color=auto -n"
-# abbr "gr"="grep -r"
-
-# file operation
-# abbr "cp"="cp -i"
-# abbr "mv"="mv -i"
-# abbr "rm"="rm -i"
-# abbr "rmf"="rm -fr"
-
-# etc
-# abbr "hg"="history | grep"
-# abbr "run-help"="man"
-# abbr "which-command"="whence"
+#----------------------------------------------------------#
+#  abbr                                                    #
+#----------------------------------------------------------#
 
 # git
+abbr g=git
+abbr ga='git add'
+abbr gaa='git add --all'
+abbr gb='git branch'
+abbr gbd='git branch --delete'
+abbr gbD='git branch --delete --force'
+abbr gba='git branch --all'
+abbr ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
+abbr gcm='git commit -m "%"'
+abbr gco='git checkout'
+abbr gd='git diff'
+abbr gf='git fetch'
+abbr gfo='git fetch origin'
+abbr gcf='git config --list'
+abbr glo='git log --oneline'
+abbr glg='git log --graph'
+abbr gp='git push'
+abbr gl='git pull'
+abbr gs='git status'
+abbr gst='git stash'
+
+# cd
+abbr ...='cd ../..'
+abbr ....='cd ../../..'
+abbr .....='cd ../../../..'
+abbr ......='cd ../../../../..'
+
+# docker
+abbr dps='docker ps'
+abbr dpsa='docker ps -a'
+abbr dbl='docker build'
+
+abbr dcps='docker-compose ps'
+abbr dcpsa='docker-compose ps -a'
+abbr dcb='docker-compose build'
+abbr dcupd='docker-compose up -d'
+abbr dcdn='docker-compose down'
+
+# grep
+abbr -g egrep='grep -E "%"'
+abbr -g fgrep='grep -F "%"'
+abbr hg='history | grep'

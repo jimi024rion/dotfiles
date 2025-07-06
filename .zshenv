@@ -23,6 +23,9 @@ export AQUA_PROGRESS_BAR=true # Show progress bar
 export AQUA_REMOVE_MODE=pl # Remove links and packages
 export AQUA_LOG_COLOR=always # Always use color in logs
 
+# abbr
+export ZSH_ABBR_SET_EXPANSION_CURSOR=1
+
 # Git Credetials
 if [[ -f ~/.config/git/credentials.zsh ]]; then
   source ~/.config/git/credentials.zsh
@@ -54,6 +57,7 @@ fpath=(
     /usr/local/share/zsh/site-functions(N-/)
     /usr/share/zsh/site-functions(N-/)
     /opt/homebrew/share/zsh/site-functions(N-/)
+    /opt/homebrew/share/zsh-abbr@6(N-/)
     $fpath
 )
 export FPATH
