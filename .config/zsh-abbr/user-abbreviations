@@ -20,7 +20,7 @@ abbr gcf='git config --list'
 abbr glo='git log --oneline'
 abbr glg='git log --graph'
 abbr gp='git push'
-abbr gl='git pull'
+abbr gl='git log'
 abbr gs='git status'
 abbr gst='git stash'
 
