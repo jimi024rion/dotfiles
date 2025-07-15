@@ -17,7 +17,7 @@ export ZDATADIR=$XDG_DATA_HOME/zsh
 export ZCACHEDIR=$XDG_CACHE_HOME/zsh
 
 # aqua
-export AQUA_ROOT_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua/bin"
+export AQUA_ROOT_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua"
 export AQUA_GLOBAL_CONFIG="${AQUA_GLOBAL_CONFIG:-$XDG_CONFIG_HOME/aquaproj-aqua/aqua.yaml}"
 export AQUA_PROGRESS_BAR=true # Show progress bar
 export AQUA_REMOVE_MODE=pl # Remove links and packages
@@ -34,13 +34,13 @@ fi
 typeset -U path PATH manpath sudo_path
 
 path=(
-    $AQUA_ROOT_DIR
+    $AQUA_ROOT_DIR/bin(N-/)
     $HOME/bin(N-/)
     $HOME/.local/bin(N-/)
-    /opt/homebrew/bin(N-/)
     $HOME/.pyenv/shims(N-/)
     $HOME/go/bin(N-/)
     $HOME/.volta/bin(N-/)
+    /opt/homebrew/bin(N-/)
     $path
 )
 export PATH
