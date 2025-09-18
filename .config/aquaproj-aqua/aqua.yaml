@@ -9,11 +9,11 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.381.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.406.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-- name: cli/cli@v2.74.2
-- name: evilmartians/lefthook@v1.12.2
-- name: k1LoW/runn@v0.132.2
+- name: cli/cli@v2.79.0
+- name: evilmartians/lefthook@v1.12.3
+- name: k1LoW/runn@v0.135.0
 - name: swaggo/swag@v2.0.0-rc4
 - name: air-verse/air@v1.62.0
 - name: grafana/k6@v1.2.3
