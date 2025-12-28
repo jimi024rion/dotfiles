@@ -52,4 +52,13 @@
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-collections-post-response.instructions.md": true,
+    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-collections-pre-request.instructions.md": true,
+    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-folder-post-response.instructions.md": true,
+    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-folder-pre-request.instructions.md": true,
+    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-http-request-post-response.instructions.md": true,
+    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-http-request-pre-request.instructions.md": true
+  },
 }
