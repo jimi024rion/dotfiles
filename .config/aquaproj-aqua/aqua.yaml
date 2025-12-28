@@ -16,6 +16,6 @@ packages:
 - name: k1LoW/runn@v1.1.2
 - name: swaggo/swag@v2.0.0-rc4
 - name: air-verse/air@v1.63.4
-- name: grafana/k6@v1.2.3
+- name: grafana/k6@v1.4.2
 - name: k1LoW/tbls@v1.92.2
 - name: direnv/direnv@v2.37.1
