@@ -25,3 +25,5 @@ MacOS
 - [ ] Add HomeBrew settings
 - [ ] Add abbr
 - [ ] Add bat settings
+- [ ] vim setting
+

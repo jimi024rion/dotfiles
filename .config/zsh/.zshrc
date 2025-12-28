@@ -26,3 +26,9 @@ source "$ZRCDIR/keybind.zsh"
 
 # Starship
 eval "$(starship init zsh)"
+
+# Direnv
+eval "$(direnv hook zsh)"
+
+# Pyenv
+source "$ZRCDIR/pyenv.zsh"

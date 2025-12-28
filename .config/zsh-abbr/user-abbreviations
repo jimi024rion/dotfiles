@@ -31,6 +31,7 @@ abbr .....='cd ../../../..'
 abbr ......='cd ../../../../..'
 
 # docker
+abbr d='docker'
 abbr dps='docker ps'
 abbr dpsa='docker ps -a'
 abbr dbl='docker build'

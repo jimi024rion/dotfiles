@@ -31,6 +31,9 @@ if [[ -f ~/.config/git/credentials.zsh ]]; then
   source ~/.config/git/credentials.zsh
 fi
 
+# pyenv
+export PATH="$HOME/.pyenv/shims:$PATH"
+
 typeset -U path PATH manpath sudo_path
 
 path=(

@@ -5,14 +5,17 @@
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
+  "editor.guides.bracketPairs": "active",
   // workbench
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
+  "workbench.editor.tabSizing": "fixed",
   // file
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   // etc
   "debug.inlineValues": "on",
+  "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   // terminal
@@ -20,6 +23,7 @@
   "terminal.integrated.env.osx": {
     "Q_NEW_SESSION": "1"
   },
+  "terminal.integrated.suggest.enabled": false,
   // git
   "git.confirmSync": false,
   // go
@@ -32,6 +36,7 @@
     "--fast"
   ],
   "go.toolsManagement.autoUpdate": true,
+  "go.diagnostic.vulncheck": "Imports",
   // Markdown
   "markdown-preview-github-styles.colorTheme": "light",
   "markdown-preview-enhanced.enablePreviewZenMode": false,
@@ -43,4 +48,8 @@
   // gcp
   "cloudcode.project": "print-service-024",
   "geminicodeassist.project": "print-service-024",
+  "geminicodeassist.displayInlineContextHint": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
 }

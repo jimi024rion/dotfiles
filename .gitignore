@@ -1,6 +1,7 @@
 ### all ignore ###
 /*
 /.**
+.DS_Store
 
 ### not ignore ###
 !/.config/
