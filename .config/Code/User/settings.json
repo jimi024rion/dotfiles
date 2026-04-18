@@ -6,10 +6,16 @@
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "editor.guides.bracketPairs": "active",
+  "editor.renderLineHighlight": "all",
+  "editor.renderLineHighlightOnlyWhenFocus": true,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "explicit",
   // workbench
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "workbench.editor.tabSizing": "fixed",
+  "workbench.colorTheme": "Dark Modern",
+  "workbench.panel.showLabels": false,
   // file
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -40,25 +46,31 @@
   // Markdown
   "markdown-preview-github-styles.colorTheme": "light",
   "markdown-preview-enhanced.enablePreviewZenMode": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
   // drawio
   "hediet.vscode-drawio.resizeImages": null,
   "hediet.vscode-drawio.theme": "atlas",
   // codelens
   "diffEditor.codeLens": true,
   // gcp
-  "cloudcode.project": "print-service-024",
-  "geminicodeassist.project": "print-service-024",
+  "google.cloud.project": "jimii-dev",
+  "cloudcode.project": "jimii-dev",
+  // gemini
+  "geminicodeassist.project": "jimii-dev",
   "geminicodeassist.displayInlineContextHint": false,
-  "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-  },
+  "claudeCode.useTerminal": true,
+  "claudeCode.preferredLocation": "panel",
   "chat.instructionsFilesLocations": {
     ".github/instructions": true,
-    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-collections-post-response.instructions.md": true,
-    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-collections-pre-request.instructions.md": true,
-    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-folder-post-response.instructions.md": true,
-    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-folder-pre-request.instructions.md": true,
-    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-http-request-post-response.instructions.md": true,
-    "/var/folders/tv/w8rpspjs7m1dfmjzf3v4rdpw0000gn/T/postman-http-request-pre-request.instructions.md": true
+    ".claude/rules": true,
+    "~/.copilot/instructions": true,
+    "~/.claude/rules": true,
   },
+  "http.systemCertificatesNode": true,
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+  },
+  "chat.viewSessions.orientation": "stacked",
 }

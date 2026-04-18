@@ -46,3 +46,10 @@ abbr dcdn='docker-compose down'
 abbr -g egrep='grep -E "%"'
 abbr -g fgrep='grep -F "%"'
 abbr hg='history | grep'
+
+# gitlab-ci-local
+abbr gcl='gitlab-ci-local'
+
+# claude
+cc 'claude'
+ccyolo 'claude --allow-dangerously-skip-permissions'

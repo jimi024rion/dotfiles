@@ -4,6 +4,7 @@
 	#  GIT_AUTHOR_EMAIL
 	name = jimii
 	email = jimi024lab@gmail.com
+	# signingkey = DABB8FE4B078300E
 [core]
 	editor = vim
 	quotepath = false
@@ -27,3 +28,5 @@
 	editor = vim
 [pull]
 	rebase = true
+# [commit]
+	# gpgsign = true
