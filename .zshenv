@@ -11,30 +11,31 @@ export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
-export ZHOMEDIR=$XDG_CONFIG_HOME/zsh
-export ZRCDIR=$ZHOMEDIR/rc
+export ZRCDIR=$ZDOTDIR/rc
 export ZDATADIR=$XDG_DATA_HOME/zsh
 export ZCACHEDIR=$XDG_CACHE_HOME/zsh
 
 # aqua
-export AQUA_ROOT_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua"
+export AQUA_ROOT_DIR="$XDG_DATA_HOME/aquaproj-aqua"
 export AQUA_GLOBAL_CONFIG="${AQUA_GLOBAL_CONFIG:-$XDG_CONFIG_HOME/aquaproj-aqua/aqua.yaml}"
-export AQUA_PROGRESS_BAR=true # Show progress bar
-export AQUA_REMOVE_MODE=pl # Remove links and packages
-export AQUA_LOG_COLOR=always # Always use color in logs
+export AQUA_PROGRESS_BAR=true   # Show progress bar
+export AQUA_REMOVE_MODE=pl      # Remove links and packages
+export AQUA_LOG_COLOR=always    # Always use color in logs
 
 # abbr
 export ABBR_SET_EXPANSION_CURSOR=1
 
-# Git Credetials
-if [[ -f ~/.config/git/credentials.zsh ]]; then
-  source ~/.config/git/credentials.zsh
+# Homebrew
+if [[ -d /opt/homebrew ]]; then
+    export HOMEBREW_PREFIX="/opt/homebrew"
+elif [[ -x /usr/local/bin/brew ]]; then
+    export HOMEBREW_PREFIX="/usr/local"
+else
+    export HOMEBREW_PREFIX=$(brew --prefix)
 fi
 
-# pyenv
-export PATH="$HOME/.pyenv/shims:$PATH"
-
 typeset -U path PATH manpath sudo_path
+typeset -xTU FPATH fpath
 
 path=(
     $AQUA_ROOT_DIR/bin(N-/)
@@ -46,19 +47,16 @@ path=(
     /opt/homebrew/bin(N-/)
     $path
 )
-export PATH
 
-# zsh function search path
 fpath=(
-    $ZHOMEDIR/widgets(N-/)
-    $ZHOMEDIR/completions(N-/)
-    /usr/local/share/zsh/site-functions(N-/)
+    $ZDOTDIR/widgets(N-/)
+    $ZDOTDIR/completions(N-/)
     /usr/share/zsh/site-functions(N-/)
-    /opt/homebrew/share/zsh/site-functions(N-/)
-    /opt/homebrew/share/zsh-abbr@6(N-/)
+    $HOMEBREW_PREFIX/share/zsh/site-functions(N-/)
+    $HOMEBREW_PREFIX/share/zsh-abbr@6(N-/)
+    $HOMEBREW_PREFIX/share/zsh-completions(N-/)
     $fpath
 )
-export FPATH
 
 # editor
 export EDITOR=vim

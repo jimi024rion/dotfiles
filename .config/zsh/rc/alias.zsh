@@ -1,21 +1,24 @@
 #----------------------------------------------------------#
 ##  Aliases                                               ##
+##  コマンドショートカットは abbr で管理する。            ##
+##  alias はコマンドを常時・無条件に上書きする場合のみ。  ##
 #----------------------------------------------------------#
 
-# ls
-alias "ls"="ls --color=auto"
-alias "ll"="ls -l"
-alias "la"="ls -la"
+# カラー表示を常時有効化（端末の色設定に関わらず常に上書き）
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 
-# grep
-alias "grep"="grep --color=auto"
-alias "gr"="grep -r"
+# 破壊的操作に確認プロンプトを追加（誤操作防止）
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
 
-# file operation
-alias "cp"="cp -i"
-alias "mv"="mv -i"
-alias "rm"="rm -i"
-alias "rmf"="rm -fr"
-
-# history
-alias "hg"="history | grep"
+# alias / abbr の検索・一覧表示ユーティリティ
+# 引数なし: 全エイリアスを表示、引数あり: grep でフィルタ
+als() {
+  if [[ -z "$1" ]]; then
+    alias | sort
+  else
+    alias | grep -i "$1"
+  fi
+}

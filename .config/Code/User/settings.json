@@ -56,10 +56,11 @@
   "diffEditor.codeLens": true,
   // gcp
   "google.cloud.project": "jimii-dev",
-  "cloudcode.project": "jimii-dev",
   // gemini
   "geminicodeassist.project": "jimii-dev",
   "geminicodeassist.displayInlineContextHint": false,
+  // cloudcode
+  "cloudcode.project": "jimii-dev",
   "claudeCode.useTerminal": true,
   "claudeCode.preferredLocation": "panel",
   "chat.instructionsFilesLocations": {
