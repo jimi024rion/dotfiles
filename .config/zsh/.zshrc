@@ -30,11 +30,11 @@ source "$ZRCDIR/option.zsh"
 # エイリアス（システム常時上書き分のみ: ls/grep/cp/mv/rm）
 source "$ZRCDIR/alias.zsh"
 
-# zsh-abbr: コマンドショートカットを abbr で管理
-source $HOMEBREW_PREFIX/share/zsh-abbr@6/zsh-abbr.zsh
-
 # キーバインド（履歴検索 / 単語移動 / ghq-fzf 等）
 source "$ZRCDIR/keybind.zsh"
+
+# zsh-abbr: コマンドショートカットを abbr で管理
+source $HOMEBREW_PREFIX/share/zsh-abbr@6/zsh-abbr.zsh
 
 # Starship: クロスシェル対応プロンプト
 eval "$(starship init zsh)"
