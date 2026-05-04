@@ -135,8 +135,9 @@ abbr ...='cd ../..'
 abbr ....='cd ../../..'
 abbr .....='cd ../../../..'
 abbr ......='cd ../../../../..'
-abbr ll='ls -l'
-abbr la='ls -la'
+abbr ll='eza --group-directories-first --icons --git -l -I .git'
+abbr la='eza --group-directories-first --icons -la --git -I .git'
+abbr tree='eza --group-directories-first --icons -Ta --git -I .git'
 abbr rmf='rm -fr'
 
 #--- grep（グローバル略語: コマンド以外の位置でも展開） ---
