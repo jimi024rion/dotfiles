@@ -13,6 +13,10 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 
+alias ll='eza --group-directories-first --icons --git -l -I .git'
+alias la='eza --group-directories-first --icons -la --git -I .git'
+alias tree='eza --group-directories-first --icons -Ta --git -I .git'
+
 # alias / abbr の検索・一覧表示ユーティリティ
 # 引数なし: 全エイリアスを表示、引数あり: grep でフィルタ
 als() {

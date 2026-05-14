@@ -7,6 +7,9 @@ autoload -Uz ghq-fzf
 zle -N ghq-fzf
 bindkey '^g' ghq-fzf
 
+# fzf: Ctrl+R で履歴検索、Ctrl+T でファイル選択
+source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
+
 # ── マルチライン編集（fish 風 \ 継続）────────────────────────────────────────
 #
 # デフォルトの accept-line は \ 行末を recursive ZLE session で処理するため
@@ -36,24 +39,31 @@ _zle-backward-delete-char-or-join() {
 zle -N _zle-backward-delete-char-or-join
 bindkey '^?' _zle-backward-delete-char-or-join
 
-# ↑: カーソル左に改行があれば上の行へ移動、なければ履歴へ
+# zsh-autocomplete 等が ^[[A/B にバインドしたウィジェットを上書き前に保存する
+# (.zshrc で zsh-autocomplete → keybind.zsh の順に読み込まれるため取得できる)
+_saved_up_widget="${$(bindkey '^[[A' 2>/dev/null)##* }"
+_saved_up_widget="${_saved_up_widget:-up-line-or-history}"
+_saved_down_widget="${$(bindkey '^[[B' 2>/dev/null)##* }"
+_saved_down_widget="${_saved_down_widget:-down-line-or-history}"
+
+# ↑: マルチライン中は上の行へ移動、それ以外は元のウィジェット（補完 or 履歴）に委譲
 _zle-up-line-or-history() {
     if [[ $LBUFFER == *$'\n'* ]]; then
         zle up-line
     else
-        zle up-line-or-history
+        zle -- "$_saved_up_widget"
     fi
 }
 zle -N _zle-up-line-or-history
 bindkey '^[[A' _zle-up-line-or-history  # 通常モード (CSI A)
 bindkey '^[OA' _zle-up-line-or-history  # アプリケーションカーソルモード (SS3 A)
 
-# ↓: カーソル右に改行があれば下の行へ移動、なければ履歴へ
+# ↓: マルチライン中は下の行へ移動、それ以外は元のウィジェット（補完 or 履歴）に委譲
 _zle-down-line-or-history() {
     if [[ $RBUFFER == *$'\n'* ]]; then
         zle down-line
     else
-        zle down-line-or-history
+        zle -- "$_saved_down_widget"
     fi
 }
 zle -N _zle-down-line-or-history
