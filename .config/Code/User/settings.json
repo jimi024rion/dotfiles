@@ -74,4 +74,6 @@
     "editor.defaultFormatter": "ms-azuretools.vscode-containers"
   },
   "chat.viewSessions.orientation": "stacked",
+  "openapi.defaultPreviewRenderer": "redoc",
+  "terminal.integrated.tabs.enabled": false,
 }
